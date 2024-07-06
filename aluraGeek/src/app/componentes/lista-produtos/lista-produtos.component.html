@@ -1,3 +1,11 @@
 <article class="conteudoLista" >
-    
+    <ul class="cardList" >
+        <li *ngFor="let p of produto"> 
+            <app-card
+            [nome]="p.nome"
+            [preco]= "p.preco"
+            [imagem]="p.imagem">
+            </app-card>
+        </li>
+    </ul>
 </article>

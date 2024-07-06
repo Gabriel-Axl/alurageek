@@ -1,5 +1,32 @@
 .conteudoLista{
-    background-color: rgb(0, 255, 42);
     width: 100%;
     height: 40rem;
+    overflow-y: scroll;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    border: 1px solid #5300C8;
+    border-radius: 1rem;
+}
+
+.cardList{
+    list-style: none;
+    width: 90%;
+    height: 80%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 2rem;
+    row-gap: 2rem;
+}
+
+.cardList > li{
+    display: flex;
+    justify-content: center;
+}
+
+@media  screen and (max-width: 1000px){
+    .cardList{
+        grid-template-columns: 1fr 1fr;
+    }
 }

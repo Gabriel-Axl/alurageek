@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { ProdutoServiceService } from 'src/app/services/produto-service.service';
 
 @Component({
   selector: 'app-formulario',
@@ -7,18 +8,18 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class FormularioComponent implements OnInit {
 
-  
-  @Input() nome:String = ""
-  @Input() preco:Number = 0 
-  @Input() imagem:String = ""
+  nome:string = "";
+  preco!:number;
+  imagem:string = ""
 
-  constructor() { }
+  constructor(private produtoServ:ProdutoServiceService) { }
 
   ngOnInit(): void {
   }
 
   adicionarProduto() {
-    console.log(this.nome, this.preco, this.imagem);
+    this.produtoServ.guardarProduto(this.nome, this.preco, this.imagem)
+    console.log(this.produtoServ.getProdutos());
     this.limparForm()
   }
 
@@ -29,3 +30,4 @@ export class FormularioComponent implements OnInit {
   }
 
 }
+
