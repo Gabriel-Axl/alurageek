@@ -1,1 +1,10 @@
-<article class="conteudoFormulario"></article>
+<article class="conteudoFormulario">
+    <h2>Adicionar produto</h2>
+    <form class="addForm" (submit)="adicionarProduto()">
+        <input class="inputNome" type="text" placeholder="nome..." [(ngModel)]="nome" name="nome" required/> 
+        <input class="inputPreco" type="number" placeholder="0" [(ngModel)]="preco" name="preco" required/> 
+        <input class="inputImg" type="text" placeholder="url da img..." [(ngModel)]="imagem" name="imagem" required/> 
+
+        <button class="btn" type="submit">Guardar</button>
+     </form>
+</article>

@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { FormularioComponent } from './componentes/formulario/formulario.component';
 import { ListaProdutosComponent } from './componentes/lista-produtos/lista-produtos.component';
 import { CardComponent } from './componentes/card/card.component';
+import { FormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -16,7 +18,8 @@ import { CardComponent } from './componentes/card/card.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
